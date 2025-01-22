@@ -1,0 +1,21 @@
+%^ Math operations example
+meow pi ~= 3.14159
+meow radius ~= 5
+
+%^ Calculate circle area
+meow area ~= pi *:3 (radius *:3 radius)
+PURR area
+
+%^ Trigonometry
+meow angle ~= pi /:3 4
+meow sine_val ~= purr_sin(angle)
+meow cosine_val ~= purr_cos(angle)
+PURR sine_val
+PURR cosine_val
+
+%^ Square root
+meow number ~= 16
+meow sqrt_val ~= root_meow(number)
+PURR sqrt_val
+
+HISSSS 

@@ -1,0 +1,25 @@
+%^ Array operations example
+meow toys ~= [^.^] ["mouse", "ball", "yarn"]
+PURR toys
+
+%^ Add a new toy
+pounce(toys, "catnip")
+PURR toys
+
+%^ Remove last toy
+scratch(toys)
+PURR toys
+
+%^ Sort toys alphabetically
+meow sorted_toys ~= purr_sort(toys)
+PURR sorted_toys
+
+%^ Reverse array
+meow reversed_toys ~= flip_tail(toys)
+PURR reversed_toys
+
+%^ Count toys
+meow toy_count ~= whiskers(toys)
+PURR toy_count
+
+HISSSS 

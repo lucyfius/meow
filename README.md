@@ -1,191 +1,147 @@
+# Meow Programming Language 🐱
 
-# Meow | programming language
-
-**who knew carrs can code?????** 🐾  
+**A programming language for cars, if you're not a car, do not use... D:**
 
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Getting Started](#getting-started)
-   - [Installation](#installation)
-   - [Running Your First Meow Script](#running-your-first-meow-script)
-3. [Syntax and Features](#syntax-and-features)
-   - [Keywords](#keywords)
-   - [Operators](#operators)
-   - [Comments](#comments)
-   - [Examples](#examples)
-4. [Advanced Features](#advanced-features)
-   - [Functions](#functions)
-   - [Arrays and Strings](#arrays-and-strings)
-   - [File I/O](#file-io)
-   - [Exception Handling](#exception-handling)
-5. [Built-In Functions](#built-in-functions)
+3. [Examples](#examples)
+4. [Language Features](#language-features)
+5. [Development](#development)
 6. [Contributing](#contributing)
 7. [License](#license)
 
----
-
 ## Introduction
 
-Welcome to **Meow**, a language for cars, if you're not a car, do not use...  D:
-
----
+Meow is a playful programming language that combines functionality with feline charm. Perfect for cats who code (or cars, apparently).
 
 ## Getting Started
 
 ### Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/meow.git
-   cd meow
-   ```
+```bash
+git clone https://github.com/your-username/meow.git
+cd meow
+```
 
-2. Ensure Python 3.7+ is installed on your system.
+2. Ensure Python 3.7+ is installed.
 
 3. Run the interpreter:
-   ```bash
-   python meow_interpreter.py
-   ```
-
-### Running Your First Meow Script
-
-1. Create a `.meow` script file:
-   ```bash
-   touch hello.meow
-   ```
-
-2. Add the following code to `hello.meow`:
-   ```
-   meow greeting ~= "Hello, World!"
-   PURR greeting
-   HISSSS()
-   ```
-
-3. Run the script:
-   ```bash
-   python meow_interpreter.py hello.meow
-   ```
-
-You should see:
-```
-😺 *purrs contentedly* Hello, World!
-🙀 *dramatic cat screech* Program terminated with a HISSSS!
+```bash
+python src/main.py your_script.meow
 ```
 
----
+### Running Your First Script
 
-## Syntax and Features
-
-### Keywords
-
-| Keyword       | Description                              |
-|---------------|------------------------------------------|
-| `meow`        | Declare variables.                      |
-| `PURR`        | Print a variable or value.              |
-| `HISSSS`      | Terminate the program.                  |
-| `meowmeow`    | Define a function.                      |
-| `catnip`      | Start an `if` condition.                |
-| `else`        | Start an `else` condition.              |
-| `tail`        | Start a loop.                           |
-| `nyaa`        | Return a value from a function.         |
-
-### Operators
-
-| Operator      | Description                              |
-|---------------|------------------------------------------|
-| `~=`          | Assignment (equals).                    |
-| `>:3`         | Greater than.                           |
-| `<:3`         | Less than.                              |
-| `+:3`         | Addition.                               |
-| `-:3`         | Subtraction.                            |
-| `*:3`         | Multiplication.                         |
-| `/:3`         | Division.                               |
-| `^^`          | Increment.                              |
-
-### Comments
-
-Use `%^` for single-line comments:
-```
-%^ This is a comment in Meow!
+Create a file `hello.meow`:
+```meow
+meow greeting ~= "Hello from the Meow language! 🐱"
+PURR greeting
+HISSSS
 ```
 
----
+## Examples
 
-## Advanced Features
+Check out our example scripts in the `examples/` directory:
 
-### Functions
+- `hello_world.meow` - Basic syntax introduction
+- `array_operations.meow` - Working with arrays
+- `math_fun.meow` - Mathematical operations
+- `file_handling.meow` - File I/O with error handling
+- `string_manipulation.meow` - String operations
 
-Define reusable blocks of code using `meowmeow`:
-```
-meowmeow add_treats(treats, more_treats) {
-    nyaa treats +:3 more_treats
-}
-```
+## Language Features
 
-### Arrays and Strings
+### Core Syntax
+- Variables: `meow variable_name ~= value`
+- Print: `PURR value`
+- Exit: `HISSSS`
+- Comments: `%^ This is a comment`
 
-- Create arrays:
-  ```
-  meow toys ~= [^.^] ["mouse", "ball", "yarn"]
-  ```
-- Access and manipulate strings:
-  ```
-  meow greeting ~= "Meow"
-  meow full_greeting ~= meow_concat(greeting, " World!")
-  ```
+### Data Types
+- Strings: `"Hello!"`
+- Numbers: `42`, `3.14`
+- Arrays: `[^.^] ["mouse", "ball", "yarn"]`
 
-### File I/O
+### Built-in Functions
 
-Write to and read from files with `pawwrite` and `pawread`:
-```
-pawwrite("file.txt", "Hello, Meow!")
-meow content ~= pawread("file.txt")
-PURR content
-```
+#### Array Operations
+- `pounce(array, item)` - Add item to array
+- `scratch(array)` - Remove last item
+- `purr_sort(array)` - Sort array
+- `flip_tail(array)` - Reverse array
+- `whiskers(array)` - Get array length
 
-### Exception Handling
+#### String Operations
+- `meow_concat(str1, str2)` - Concatenate strings
+- `purr_repeat(str, times)` - Repeat string
+- `yarn_split(str, delimiter)` - Split string
+- `yarn_join(array, delimiter)` - Join array elements
 
-Handle errors gracefully using `pounce`, `land`, and `groom`:
-```
+#### Math Operations
+- `purr_sin(x)` - Sine function
+- `purr_cos(x)` - Cosine function
+- `root_meow(x)` - Square root
+- `log_meow(x)` - Natural logarithm
+
+#### File Operations
+- `pawwrite(filename, content)` - Write to file
+- `pawread(filename)` - Read from file
+- `pawappend(filename, content)` - Append to file
+
+### Error Handling
+```meow
 pounce {
-    meow bad_file ~= pawread("nonexistent.txt")
+    %^ Try block
 } land {
-    PURR "Caught the error like a pro cat! 😺"
+    %^ Catch block
 } groom {
-    PURR "Always clean up after playing! 🧹"
+    %^ Finally block
 }
 ```
 
----
+## Development
 
-## Built-In Functions
+### Project Structure
+```
+meow/
+├── src/
+│   ├── interpreter/
+│   │   ├── builtins/
+│   │   │   ├── array_ops.py
+│   │   │   ├── file_ops.py
+│   │   │   ├── math_ops.py
+│   │   │   └── string_ops.py
+│   │   └── interpreter.py
+│   ├── lexer/
+│   │   ├── lexer.py
+│   │   └── token_types.py
+│   ├── utils/
+│   │   ├── ascii_art.py
+│   │   └── config.py
+│   └── tests/
+│       ├── test_array_ops.py
+│       ├── test_file_ops.py
+│       ├── test_math_ops.py
+│       └── test_string_ops.py
+└── examples/
+    ├── hello_world.meow
+    ├── array_operations.meow
+    ├── math_fun.meow
+    ├── file_handling.meow
+    └── string_manipulation.meow
+```
 
-| Function       | Description                              |
-|----------------|------------------------------------------|
-| `nap`          | Pauses execution for a specified time.   |
-| `pounce`       | Adds an item to an array.                |
-| `scratch`      | Removes the last item from an array.     |
-| `meow_concat`  | Concatenates two strings.                |
-| `whiskers`     | Returns the length of a string/array.    |
-| `claw`         | Slices a string/array.                  |
-| `purr_repeat`  | Repeats a string.                       |
-| `pawwrite`     | Writes content to a file.               |
-| `pawread`      | Reads content from a file.              |
-| `purr_sort`    | Sorts an array.                         |
-| `flip_tail`    | Reverses an array.                      |
-| `purr_sin`     | Computes sine of a number.              |
-| `purr_cos`     | Computes cosine of a number.            |
-| `purr_tan`     | Computes tangent of a number.           |
-| `root_meow`    | Computes the square root of a number.   |
-
----
+### Running Tests
+```bash
+python src/tests/run_tests.py
+```
 
 ## Contributing
 
-I welcome contributions! Feel free to open an issue or submit a pull request to improve **Meow**.
-
----
+Contributions are welcome! Please read our contributing guidelines before submitting pull requests.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License.

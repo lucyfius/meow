@@ -1,0 +1,23 @@
+%^ String operations example
+meow greeting ~= "meow"
+meow name ~= "Whiskers"
+
+%^ String concatenation
+meow full_greeting ~= meow_concat(greeting, " from ")
+meow message ~= meow_concat(full_greeting, name)
+PURR message
+
+%^ String repetition
+meow loud_meow ~= purr_repeat("MEOW! ", 3)
+PURR loud_meow
+
+%^ String splitting
+meow sentence ~= "cats,dogs,birds,fish"
+meow animals ~= yarn_split(sentence, ",")
+PURR animals
+
+%^ String joining
+meow new_sentence ~= yarn_join(animals, " and ")
+PURR new_sentence
+
+HISSSS 

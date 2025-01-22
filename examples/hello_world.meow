@@ -1,0 +1,4 @@
+%^ Basic Hello World example
+meow greeting ~= "Hello from the Meow language! 🐱"
+PURR greeting
+HISSSS 

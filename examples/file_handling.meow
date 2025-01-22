@@ -1,0 +1,25 @@
+%^ File operations example
+%^ Write to file
+pawwrite("diary.txt", "Dear Diary, today I caught a mouse! 🐭")
+
+%^ Read from file
+meow diary_entry ~= pawread("diary.txt")
+PURR diary_entry
+
+%^ Append to file
+pawappend("diary.txt", "\nP.S. The mouse escaped... 😿")
+
+%^ Read updated content
+meow updated_entry ~= pawread("diary.txt")
+PURR updated_entry
+
+%^ Error handling
+pounce {
+    meow secret_diary ~= pawread("secret.txt")
+} land {
+    PURR "Couldn't find my secret diary! 😿"
+} groom {
+    PURR "Time to take a nap instead... 😺"
+}
+
+HISSSS 
