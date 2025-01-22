@@ -26,7 +26,7 @@
 
 ## Introduction
 
-Welcome to **Meow**, a whimsical, meme-worthy programming language designed for fun, learning, and creative trolling. With its cat-themed syntax, playful features, and dramatic error messages, Meow is a delightful way to explore coding concepts while embracing your inner feline.
+Welcome to **Meow**, a language for cars, if you're not a car, do not use...  D:
 
 ---
 
@@ -182,7 +182,7 @@ pounce {
 
 ## Contributing
 
-We welcome contributions! Feel free to open an issue or submit a pull request to improve **Meow**.
+I welcome contributions! Feel free to open an issue or submit a pull request to improve **Meow**.
 
 ---
 
