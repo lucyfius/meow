@@ -289,10 +289,10 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on:
 
 ## Support
 
-- Documentation: [docs.meow-lang.org](https://docs.meow-lang.org)
+- Documentation: [www.lota.dev](https://www.lota.dev)
 - Issues: GitHub Issues
-- Community: Discord Server
-- Email: support@meow-lang.org
+- Community: [www.lota.dev](https://www.lota.dev)
+- Email: [me@lota.dev](mailto:me@lota.dev)
 
 ## License
 
