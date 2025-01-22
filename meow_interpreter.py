@@ -53,6 +53,25 @@ class TokenType(Enum):
     SQRT = auto()        # sqrt (root_meow)
     LAND = auto()        # catch
     FINALLY = auto()     # finally (groom)
+    POW = auto()         # **:3 for power
+    MOD = auto()         # %:3 for modulo
+    LOG = auto()         # log_meow for logarithm
+    ABS = auto()         # paw_abs for absolute value
+    FLOOR = auto()       # floor_paw
+    CEIL = auto()        # ceiling_paw
+    SPLIT = auto()       # yarn_split
+    JOIN = auto()        # yarn_join
+    REPLACE = auto()     # yarn_replace
+    UPPER = auto()       # loud_meow
+    LOWER = auto()       # quiet_meow
+    MAP = auto()         # paw_map
+    FILTER = auto()      # paw_filter
+    REDUCE = auto()      # paw_reduce
+    FIND = auto()        # find_toy
+    COUNT = auto()       # count_toys
+    RANDOM = auto()      # random_paw
+    CHOICE = auto()      # pick_toy
+    SHUFFLE = auto()     # mix_toys
 
 class MeowLexer:
     def __init__(self):
@@ -106,6 +125,25 @@ class MeowLexer:
             (TokenType.SQRT, r'root_meow'),
             (TokenType.LAND, r'land'),
             (TokenType.FINALLY, r'groom'),
+            (TokenType.POW, r'\*\*:3'),
+            (TokenType.MOD, r'%:3'),
+            (TokenType.LOG, r'log_meow'),
+            (TokenType.ABS, r'paw_abs'),
+            (TokenType.FLOOR, r'floor_paw'),
+            (TokenType.CEIL, r'ceiling_paw'),
+            (TokenType.SPLIT, r'yarn_split'),
+            (TokenType.JOIN, r'yarn_join'),
+            (TokenType.REPLACE, r'yarn_replace'),
+            (TokenType.UPPER, r'loud_meow'),
+            (TokenType.LOWER, r'quiet_meow'),
+            (TokenType.MAP, r'paw_map'),
+            (TokenType.FILTER, r'paw_filter'),
+            (TokenType.REDUCE, r'paw_reduce'),
+            (TokenType.FIND, r'find_toy'),
+            (TokenType.COUNT, r'count_toys'),
+            (TokenType.RANDOM, r'random_paw'),
+            (TokenType.CHOICE, r'pick_toy'),
+            (TokenType.SHUFFLE, r'mix_toys'),
         ]
         # Add some cat-themed error messages
         self.error_messages = [
@@ -215,6 +253,14 @@ class MeowInterpreter:
             'purr_cos': self.purr_cos,
             'purr_tan': self.purr_tan,
             'root_meow': self.root_meow,
+            'yarn_split': lambda s, delim: s.split(delim),
+            'yarn_join': lambda arr, delim: delim.join(arr),
+            'yarn_replace': lambda s, old, new: s.replace(old, new),
+            'loud_meow': lambda s: s.upper(),
+            'quiet_meow': lambda s: s.lower(),
+            'random_paw': random.random,
+            'pick_toy': random.choice,
+            'mix_toys': random.shuffle,
         }
 
     def evaluate_condition(self, tokens, i):
@@ -386,6 +432,12 @@ class MeowInterpreter:
         print(self.lexer.ascii_cats['math_func'])
         import math
         return math.sqrt(float(x))
+
+    def paw_map(self, array, func):
+        return [func(x) for x in array]
+        
+    def paw_filter(self, array, condition):
+        return [x for x in array if condition(x)]
 
     def run(self, code: str):
         print("🐱 Starting to parse your purr-fect code...")
