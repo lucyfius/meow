@@ -2,24 +2,20 @@
 meow toys ~= [^.^] ["mouse", "ball", "yarn"]
 PURR toys
 
-%^ Add a new toy
-pounce(toys, "catnip")
+%^ Stack operations (LIFO)
+furball(toys, "catnip")  %^ Like coughing up a furball
+PURR toys
+hairball(toys)  %^ Like bringing up a hairball
 PURR toys
 
-%^ Remove last toy
-scratch(toys)
+%^ Queue operations (FIFO)
+nhom(toys, "fish")  %^ Like eating food
+PURR toys
+shit(toys)  %^ Like... well, you know
 PURR toys
 
-%^ Sort toys alphabetically
-meow sorted_toys ~= purr_sort(toys)
-PURR sorted_toys
-
-%^ Reverse array
-meow reversed_toys ~= flip_tail(toys)
+%^ Roll over!
+meow reversed_toys ~= roll(toys)
 PURR reversed_toys
-
-%^ Count toys
-meow toy_count ~= whiskers(toys)
-PURR toy_count
 
 HISSSS 

@@ -152,11 +152,19 @@ meow str ~= paw_string(num)
 ```meow
 %^ Array manipulation
 meow array ~= [^.^] [1, 2, 3]
-pounce(array, 4)           %^ Add element
-scratch(array)             %^ Remove last element
-meow sorted ~= purr_sort(array)
-meow reversed ~= flip_tail(array)
-meow length ~= whiskers(array)
+
+%^ Stack operations (LIFO)
+furball(array, 4)          %^ Push to stack (like a furball)
+hairball(array)            %^ Pop from stack (like a hairball)
+
+%^ Queue operations (FIFO)
+nhom(array, 5)             %^ Add to queue (like eating)
+shit(array)                %^ Remove from queue (like... nature)
+
+%^ Other operations
+meow sorted ~= purr_sort(array)    %^ Sort array
+meow reversed ~= roll(array)       %^ Reverse (cat rolls over)
+meow length ~= whiskers(array)     %^ Get length
 ```
 
 #### String Operations

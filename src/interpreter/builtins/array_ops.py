@@ -1,5 +1,6 @@
 """Array operations for the Meow language."""
 from typing import List, Any, Callable, TypeVar, Optional
+from collections import deque
 
 T = TypeVar('T')
 
@@ -7,32 +8,56 @@ class MeowArrayOps:
     def __init__(self, interpreter):
         self.interpreter = interpreter
 
-    def pounce(self, array: List[Any], item: Any) -> List[Any]:
-        """Add item to array."""
+    # Stack operations (LIFO)
+    def furball(self, array: List[Any], item: Any) -> List[Any]:
+        """Push item onto stack (LIFO).
+        Like a cat coughing up a furball - it comes out last!"""
         print(self.interpreter.lexer.ascii_cats['array_op'])
         array.append(item)
-        print(f"😺 *pounced on* {item}")
+        print(f"😺 *coughed up a furball* {item}")
         return array
         
-    def scratch(self, array: List[Any]) -> List[Any]:
-        """Remove and return last item from array."""
+    def hairball(self, array: List[Any]) -> List[Any]:
+        """Pop item from stack (LIFO).
+        Like a cat bringing up a hairball - takes from the top!"""
         print(self.interpreter.lexer.ascii_cats['array_op'])
         if array:
             item = array.pop()
-            print(f"😺 *scratched off* {item}")
+            print(f"😺 *hacked up* {item}")
         else:
-            print("😿 *sad meow* Nothing to scratch!")
+            print("😿 *dry heaves* Nothing to bring up!")
         return array
+
+    # Queue operations (FIFO)
+    def nhom(self, array: List[Any], item: Any) -> List[Any]:
+        """Add item to queue (FIFO).
+        Like a cat eating food - goes in first!"""
+        print(self.interpreter.lexer.ascii_cats['array_op'])
+        array.insert(0, item)
+        print(f"😺 *nom nom* ate {item}")
+        return array
+        
+    def shit(self, array: List[Any]) -> List[Any]:
+        """Remove item from queue (FIFO).
+        Like a cat's digestion - first in, first out!"""
+        print(self.interpreter.lexer.ascii_cats['array_op'])
+        if array:
+            item = array.pop()
+            print(f"😺 *used litterbox* disposed of {item}")
+        else:
+            print("😿 *empty tummy* Nothing to process!")
+        return array
+
+    def roll(self, array: List[T]) -> List[T]:
+        """Reverse array order.
+        Like a cat rolling over!"""
+        print(self.interpreter.lexer.ascii_cats['array_op'])
+        return array[::-1]
 
     def purr_sort(self, array: List[T], reverse: bool = False) -> List[T]:
         """Sort array in ascending or descending order."""
         print(self.interpreter.lexer.ascii_cats['array_op'])
         return sorted(array, reverse=reverse)
-
-    def flip_tail(self, array: List[T]) -> List[T]:
-        """Reverse array order."""
-        print(self.interpreter.lexer.ascii_cats['array_op'])
-        return array[::-1]
 
     def whiskers(self, collection: List[Any]) -> int:
         """Get length of array."""
